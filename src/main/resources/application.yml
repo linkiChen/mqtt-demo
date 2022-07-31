@@ -1,0 +1,20 @@
+server:
+  port: 8091
+  servlet:
+    context-path: /mqtt-service
+
+spring:
+  mqtt:
+    host: tcp://192.168.56.110:1883
+    clientId: iot-message
+    topic: emqx_test_topic
+    username: admin
+    password: public
+    timeout: 30
+    keepAlive: 30
+    completionTimeout: 3000
+    dataIntervalTime: 120000
+  async:
+    corePoolSize: 10
+    maxPoolSize: 20
+    queueCapacity: 20
